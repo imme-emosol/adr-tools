@@ -100,6 +100,7 @@ else
 fi
 
 newid=$(printf "%04d" $newnum)
+newid=$(printf "%d" $newnum)
 slug=$(echo -n $title | tr -Ccs [:alnum:] - | tr [:upper:] [:lower:] | sed -e 's/[^[:alnum:]]*$//' -e 's/^[^[:alnum:]]*//')
 dstfile=$dstdir/$newid-$slug.md
 date=${ADR_DATE:-$(date +%Y-%m-%d)}
